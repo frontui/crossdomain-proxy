@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function autoHeight(){
+		    // 当前页面地址 `http://xxx.xx/proxy.html#height=2000`
+			var hash = location.hash;
+			// 获取height的值
+			var height = hash.split('=')[1];
+			// 调用主域全局设置高度函数
+			// `parent.parent` 同域可以访问
+			parent.parent.ajustHeight(height);
+		}
+		// 页面加载完成执行
+		window.onload = function(){
+			// 直接设置
+			autoHeight();
+			// 当父级页面内容有变动，修改了当前url时
+			if('onhashchange' in window) {  // 标准浏览器，hash改变，立刻触发设置高度事件
+				window.onhashchange = autoHeight;
+			} else { // 兼容ie8-
+				setInterval(autoHeight, 200);
+			}
+		}
+		
+	</script>
+</body>
+</html>

@@ -22,9 +22,11 @@
 			// 当父级页面内容有变动，修改了当前url时
 			if('onhashchange' in window) {  // 标准浏览器，hash改变，立刻触发设置高度事件
 				window.onhashchange = autoHeight;
-			} else { // 兼容ie8-
-				setInterval(autoHeight, 200);
-			}
+			} //else { // 兼容ie8-
+				//setInterval(autoHeight, 1000);
+			//}
+			// 定时任务
+			setInterval(autoHeight, 1000);
 		}
 		
 	</script>

@@ -1,0 +1,27 @@
+{
+  "name": "crossdomain-proxy",
+  "version": "1.0.0",
+  "description": "cross third domain web",
+  "main": "autoHeight.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontui/crossdomain-proxy.git"
+  },
+  "keywords": [
+    "['crossdomain'",
+    "'proxy']"
+  ],
+  "author": "frontpay FED",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frontui/crossdomain-proxy/issues"
+  },
+  "homepage": "https://github.com/frontui/crossdomain-proxy#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-zip": "^3.0.2"
+  }
+}

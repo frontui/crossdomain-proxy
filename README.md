@@ -53,7 +53,13 @@ window.onload = function(){
 	if('onhashchange' in window) {  // 标准浏览器，hash改变，立刻触发设置高度事件
 		window.onhashchange = autoHeight;
 	} else { // 兼容ie8-
-		setInterval(autoHeight, 200);
+		setInterval(autoHeight, 1e3);
 	}
 }
+```
+
+## 发布打包zip
+
+```
+gulp
 ```
